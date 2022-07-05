@@ -1,0 +1,653 @@
+@import './colors';
+@import './components';
+@import './animated-text';
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    color: $main-color;
+}
+
+// HEADER
+
+.header  {
+    background: linear-gradient(180deg, rgba(11, 31, 58, 0.85) 39.06%, rgba(14, 26, 48, 0.85) 98.44%), url(../../dist/img/hero-bg.png);
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    background-attachment: fixed;
+
+    &__icons {
+        display: none;
+        justify-content: flex-end;
+        padding-right: 1em;
+        
+        a {
+            color: $main-color;
+            padding: 0.5em 0 0 0.6em;
+        }
+        i {
+            font-size: 2.2rem;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    &__top {
+        padding-top: 2em;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        &-btn {
+            font-size: 2.7rem;
+            background: none;
+            border: none;
+            color: $main-color;
+            z-index: 100;
+        }
+
+        &-logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-family: 'Orbitron';
+            text-transform: uppercase;
+            color: $main-color;
+    
+            h1, i {
+                font-size: 1.8rem;
+            }
+            i {
+                padding-right: 0.5em;
+            }
+        } 
+    }
+
+    &__bottom {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+
+        &-heading {
+            color: $main-color;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 3.6rem;
+        }
+
+        &-text {
+            color: $main-color;
+            padding: 2em 0;
+            font-size: 2rem;
+            text-align: center;
+        }
+        &-btn {
+            color: $main-color;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 3px $main-color solid;
+            padding: 0.4em 2em;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+
+            &:hover {
+                background: $main-color;
+                color: #525050;
+            }
+        }
+    }
+
+    &__arrows {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        animation: arrowtrans 1.5s infinite;
+    }
+
+    @keyframes arrowtrans {
+        0% {
+            transform: translateY(5px);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(5px);
+        }
+    }
+
+
+}
+
+// NAV-MOBILE 
+
+.nav-mobile {
+    background-color: #0B1F3A;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+
+    &--active {
+        transform: translateX(0);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            font-size: 3.2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $main-color;
+            text-align: center;
+            padding: 0.7em 0;
+        }
+    }
+}
+
+// NAV-DESKTOP 
+
+.nav-desktop {
+    display: none;
+
+    &__list {
+
+        &-item {
+            color: $main-color;
+            text-transform: uppercase;
+            font-size: 2rem;
+            text-decoration: none;
+            padding: 0.5em 0.7em;
+            cursor: pointer;
+
+        }
+    }
+
+}
+
+// ABOUT 
+
+.about {
+    background-color: $about-bg;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+
+    &__text {
+        padding-bottom: 1.5em;
+    }
+    i {
+        font-size: 10rem;
+        padding-top: 0.3em;
+    }
+}
+
+// SKILLS 
+
+.skills {
+    background: linear-gradient(180deg, rgba(67, 67, 67, 0.95) 39.06%, rgba(68, 68, 68, 0.95) 98.44%), url(../../dist/img/skills-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &__boxes {
+        background-color: rgba(255, 255, 255, 0.65);
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        padding: 3em 2em;
+    }
+    &__box {
+        background-color: #000;
+        border-radius: 7px;
+        padding: 1em 1.5em;
+        margin: 0.5em 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        transition: 0.3s transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+// PROJECTS
+
+.projects {
+    background-color: $skills-bg;
+
+    &__subtitle {
+        background-color: #000;
+        text-align: center;
+        border-radius: 7px;
+        padding: 0.8em 1.2em;
+        margin: 2em 0 0.5em 0;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+    }
+    &__boxes {
+        padding: 2.5em 0em 4em 0;
+    }
+
+    &__box {
+        position: relative;
+        height: 260px;
+        max-width: 410px;
+        width: 100%;
+        perspective: 800px;
+        cursor: pointer;
+        justify-self: center;
+
+        &-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            padding: 0.5em 0.2em;
+        }
+
+        &:hover .projects__box-behind {
+            transform: rotate(0);
+            opacity: 1;
+        }
+
+        &:hover .projects__box-img {
+            transform: rotateY(-180deg);
+            opacity: 1;
+        }
+
+        &:hover .projects__box-btn {
+          transform: rotateY(180deg);
+          opacity: 1;
+          transition: .8s;
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            transition: .8s;
+
+            &--one {
+                background: url(../../dist/img/projects1.png);
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+            &--two {
+                background: url(../../dist/img/projects2.png);
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+            &--three {
+                background: url(../../dist/img/projects3.png);
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+            &--four {
+                background: url(../../dist/img/projects4.png);
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+            &--five {
+                background: url(../../dist/img/projects5.png);
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+            &--six {
+                background: url(../../dist/img/projects6.png);
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+            &--seven {
+                background: url(../../dist/img/projects7.png);
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+            &--eight {
+                background: url(../../dist/img/projects8.png);
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+            &--nine {
+                background: url(../../dist/img/projects9.png);
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+        }
+        &-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 1em;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2.6rem;
+            text-shadow: 1px 1px 5px black;
+            cursor: pointer;
+            z-index: 10;
+            transition: .8s;
+        }
+        &-behind {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 3em;
+            background: #f2f0f0;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 8px;
+            text-align: center;
+            transition: .8s;
+            opacity: 0;
+            transform: rotateY(-180deg);
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-link {
+            padding: 0.5em 0;
+            color: #000;
+            text-decoration: none;
+            font-size: 2.2rem;
+            font-family: 'Montserrat', sans-serif;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// FOOTER
+
+.footer {
+    background: $footer-bg;
+    font-family: 'Montserrat', sans-serif;
+
+    .three-columns {
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    &__boxes {
+        .three-columns__column--two {
+            max-width: 400px;
+            width: 100%;
+        }
+        .three-columns__column--three {
+            display: none;
+        }
+    }
+
+    &__box {
+
+        justify-self: center;
+
+        &-heading {
+            text-transform: uppercase;
+            font-size: 2.4rem;
+            font-weight: 700;
+            padding-bottom: 1.5em;
+        }
+        &-row {
+            display: flex;
+            align-items: center;
+            padding: 0.5em 0;
+            transition: color 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: $main-color;
+
+            &:hover {
+                color: $accent-color;
+            }
+
+            i {
+                font-size: 2.6rem;
+                padding-right: 0.8em;
+            }
+        }
+        &-text {
+            padding: 0.5em 0;
+        }
+    }
+}
+
+// MEDIA 
+
+@media(min-width: 576px) {
+
+    .header {
+        h1, i {
+            font-size: 2.5rem;
+        }
+
+        &__bottom {
+            &-heading {
+                font-size: 5rem;
+            }
+    
+            &-text {
+                font-size: 2.8rem;
+            }
+            &-btn {
+                padding: 0.7em 3em;
+                font-weight: 600;
+            }
+        }
+    }
+    .skills {
+        
+        &__boxes {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__box {
+            margin: 0.5em 0.5em;
+            font-size: 2.6rem;
+            padding: 0.5em 1em;
+        }
+    }
+    .projects {
+
+        &__subtitle {
+            font-size: 2.4rem;
+            font-weight: 700;
+            padding: 0.5em 0.8em;
+         }
+
+    }
+}
+
+
+@media(min-width: 768px) {
+
+    .header {
+        &__bottom {
+            &-heading {
+                font-size: 6.7rem;
+            }
+    
+            &-text {
+                font-size: 3rem;
+            }
+        }
+    }
+    .footer {
+        .three-columns {
+            grid-template-rows: repeat(1,1fr);
+        }
+    }
+}
+
+
+@media(min-width: 992px) {
+    .header {
+
+        &__icons {
+            display: flex;
+        }
+
+        &__bottom {
+            &-heading {
+                font-size: 8rem;
+                max-width: 900px;
+            }
+    
+            &-text {
+                font-size: 3.8rem;
+                padding: 1em 0;
+            }
+            &-btn {
+                padding: 0.4em 2.2em;
+                font-weight: 600;
+                font-size: 2.4rem;
+            }
+        }
+        &__top {
+            padding-top: 0.5em;
+
+            &-btn {
+                display: none;
+            }
+        }
+    }
+    .nav-desktop {
+        display: block;
+    }
+
+    .about {
+            padding-bottom: 4em;
+
+        &__text {
+            padding-bottom: 2em;
+            font-size: 1.8rem;
+        }
+        i {
+            font-size: 15rem;
+        }
+    }
+
+    .skills {
+        
+        &__box {
+            margin: 0.5em 0.5em;
+            font-size: 3.6rem;
+            padding: 0.2em 0.3em;
+        }
+    }
+    .projects {
+    
+        &__subtitle {
+            width: fit-content;
+         }
+    }
+
+    .footer {
+        padding: 5em 0;
+        
+        .three-columns__column--three {
+            display: block;
+            justify-self: center;
+        }
+        
+
+        &__box {
+            justify-self: flex-start;
+
+        }
+    }
+
+
+}
+
+
+@media(min-width: 1200px) {
+    .header {
+
+        &__top {
+            &-logo {
+                h1,i {
+                    font-size: 3.2rem;
+                }
+            }
+        }
+        
+        &__bottom {
+            &-heading {
+                font-size: 9rem;
+                max-width: 992px;
+            }
+    
+            &-text {
+                font-size: 4.8rem;
+            }
+        }
+    }
+    .nav-desktop {
+        &__list {
+    
+            &-item {
+                font-size: 2.6rem;
+                padding: 0.5em 0.7em;
+            }
+        }
+    
+    }
+
+}
+

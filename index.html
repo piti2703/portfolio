@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PITI WebDev</title>
+    <link rel="stylesheet" href="dist/css/main.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/7689eee82e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="wrapper">
+            <div class="header__icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="header__top">
+                <a href="#" class="header__top-logo">
+                    <i class="fa-solid fa-code accent"></i>
+                    <h1>front-end <span class="accent">dev</span></h1>
+                </a>
+                <button class="header__top-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav class="nav-desktop">
+                    <div class="nav-desktop__list">
+                        <a href="#about" class="nav-desktop__list-item link-animation">about</a>
+                        <a href="#skills" class="nav-desktop__list-item link-animation">skills</a>
+                        <a href="#projects" class="nav-desktop__list-item link-animation">projects</a>
+                        <a href="#contact" class="nav-desktop__list-item link-animation">contact</a>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="header__bottom">
+                <h2 class="header__bottom-heading">
+                    
+                </h2>
+                <p class="header__bottom-text">
+                    If u are interest, check my projects
+                </p>
+                <a href="#about" class="header__bottom-btn">see more</a>
+            </div>
+        </div>
+        <i class="fa-solid fa-angles-down header__arrows"></i>
+        <nav class="nav-mobile">
+            <div class="nav-mobile__list">
+                <a href="#about" class="nav-mobile__list-item link-animation">about</a>
+                <a href="#skills" class="nav-mobile__list-item link-animation">skills</a>
+                <a href="#projects" class="nav-mobile__list-item link-animation">projects</a>
+                <a href="#contact" class="nav-mobile__list-item link-animation">contact</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="about section-padding" id="about">
+            <div class="wrapper">
+                <h3 class="section-title">about <span class="accent">me</span></h3>
+                <p class="about__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent laoreet, nibh congue malesuada egestas, metus magna iaculis dolor, et commodo sem enim vitae justo. Pellentesque metus erat, efficitur vitae purus lacinia, interdum mattis est. In at volutpat nibh, sed rhoncus augue. 
+                </p>
+                <p class="about__text">
+                    Morbi non pharetra tellus. Integer a magna sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus urna odio, iaculis et lectus eget, ultricies vehicula sapien. Donec eget ligula in diam maximus molestie.
+                </p>
+                <i class="fa-solid fa-handshake-simple"></i>
+            </div>
+        </section>
+        <section class="skills section-padding" id="skills">
+            <div class="wrapper">
+                <h3 class="section-title">my <span class="accent">skills</span></h3>
+                <div class="skills__boxes">
+                    <span class="skills__box">html 5</span>
+                    <span class="skills__box">css3</span>
+                    <span class="skills__box">java script</span>
+                    <span class="skills__box">react.js</span>
+                    <span class="skills__box">scss</span>
+                    <span class="skills__box">github</span>
+                    <span class="skills__box">npm</span>
+                    <span class="skills__box">gulp</span>
+                    <span class="skills__box">seo</span>
+                </div>
+            </div>
+        </section>
+        <section class="projects section-padding" id="projects">
+           <div class="wrapper">
+            <h3 class="section-title">selected <span class="accent">projects</span></h3>
+
+            <h4 class="projects__subtitle">simple websites:</h4>
+            <div class="projects__boxes three-columns">
+
+                <div class="projects__box three-columns__column three-columns__column--one">
+                    <div class="projects__box-img projects__box-img--one"></div>
+                    <button class="projects__box-btn"><i class="fas fa-sync-alt"></i></i></button>
+                    <div class="projects__box-behind">
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-brands fa-github"></i> <span>Check code</span>
+                        </a>
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-solid fa-display"></i> <span>See live</span>
+                        </a>
+                    </div>
+                    <p class="projects__box-text">Project #1 - landing page</p>
+                </div>
+
+                <div class="projects__box three-columns__column three-columns__column--two">
+                    <div class="projects__box-img projects__box-img--two"></div>
+                    <button class="projects__box-btn"><i class="fas fa-sync-alt"></i></i></button>
+                    <div class="projects__box-behind">
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-brands fa-github"></i> <span>Check code</span>
+                        </a>
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-solid fa-display"></i> <span>See live</span>
+                        </a>
+                    </div>
+                    <p class="projects__box-text">Project #2 - landing page</p>
+                </div>
+
+                <div class="projects__box three-columns__column three-columns__column--three">
+                    <div class="projects__box-img projects__box-img--three"></div>
+                    <button class="projects__box-btn"><i class="fas fa-sync-alt"></i></i></button>
+                    <div class="projects__box-behind">
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-brands fa-github"></i> <span>Check code</span>
+                        </a>
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-solid fa-display"></i> <span>See live</span>
+                        </a>
+                    </div>
+                    <p class="projects__box-text">Project #3 - landing page</p>
+                </div>
+
+            </div>
+
+            <h4 class="projects__subtitle">vanilla js apps:</h4>
+            <div class="projects__boxes three-columns">
+
+                <div class="projects__box three-columns__column three-columns__column--one">
+                    <div class="projects__box-img projects__box-img--four"></div>
+                    <button class="projects__box-btn"><i class="fas fa-sync-alt"></i></i></button>
+                    <div class="projects__box-behind">
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-brands fa-github"></i> <span>Check code</span>
+                        </a>
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-solid fa-display"></i> <span>See live</span>
+                        </a>
+                    </div>
+                    <p class="projects__box-text">Project #1 - landing page</p>
+                </div>
+
+                <div class="projects__box three-columns__column three-columns__column--two">
+                    <div class="projects__box-img projects__box-img--five"></div>
+                    <button class="projects__box-btn"><i class="fas fa-sync-alt"></i></i></button>
+                    <div class="projects__box-behind">
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-brands fa-github"></i> <span>Check code</span>
+                        </a>
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-solid fa-display"></i> <span>See live</span>
+                        </a>
+                    </div>
+                    <p class="projects__box-text">Project #2 - landing page</p>
+                </div>
+
+                <div class="projects__box three-columns__column three-columns__column--three">
+                    <div class="projects__box-img projects__box-img--six"></div>
+                    <button class="projects__box-btn"><i class="fas fa-sync-alt"></i></i></button>
+                    <div class="projects__box-behind">
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-brands fa-github"></i> <span>Check code</span>
+                        </a>
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-solid fa-display"></i> <span>See live</span>
+                        </a>
+                    </div>
+                    <p class="projects__box-text">Project #3 - landing page</p>
+                </div>
+
+            </div>
+
+            <h4 class="projects__subtitle">react.js app:</h4>
+            <div class="projects__boxes three-columns">
+
+                <div class="projects__box three-columns__column three-columns__column--one">
+                    <div class="projects__box-img projects__box-img--seven"></div>
+                    <button class="projects__box-btn"><i class="fas fa-sync-alt"></i></i></button>
+                    <div class="projects__box-behind">
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-brands fa-github"></i> <span>Check code</span>
+                        </a>
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-solid fa-display"></i> <span>See live</span>
+                        </a>
+                    </div>
+                    <p class="projects__box-text">Project #1 - landing page</p>
+                </div>
+
+                <div class="projects__box three-columns__column three-columns__column--two">
+                    <div class="projects__box-img projects__box-img--eight"></div>
+                    <button class="projects__box-btn"><i class="fas fa-sync-alt"></i></i></button>
+                    <div class="projects__box-behind">
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-brands fa-github"></i> <span>Check code</span>
+                        </a>
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-solid fa-display"></i> <span>See live</span>
+                        </a>
+                    </div>
+                    <p class="projects__box-text">Project #2 - landing page</p>
+                </div>
+
+                <div class="projects__box three-columns__column three-columns__column--three">
+                    <div class="projects__box-img projects__box-img--nine"></div>
+                    <button class="projects__box-btn"><i class="fas fa-sync-alt"></i></i></button>
+                    <div class="projects__box-behind">
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-brands fa-github"></i> <span>Check code</span>
+                        </a>
+                        <a href="#" class="projects__box-link">
+                            <i class="fa-solid fa-display"></i> <span>See live</span>
+                        </a>
+                    </div>
+                    <p class="projects__box-text">Project #3 - landing page</p>
+                </div>
+
+            </div>
+
+
+           </div>
+        </section>
+    </main>
+    <footer class="footer section-padding" id="contact">
+        <div class="wrapper">
+            <div class="footer__boxes three-columns">
+
+                <div class="footer__box three-columns__column three-columns__column--one">
+                    <h4 class="footer__box-heading">contact details</h4>
+                    <a href="#" class="footer__box-row">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Zawoja, Poland</p>
+                    </a>
+                    <a href="#" class="footer__box-row">
+                        <i class="fa-brands fa-github"></i>
+                        <p>github.com/piti2703</p>
+                    </a>
+                    <a href="#" class="footer__box-row">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <p>linkedin.com/in/piotr-trzebuniak
+                        </p>
+                    </a>
+                    <a href="#" class="footer__box-row">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>piotr.trzebuniak42@gmail.com</p>
+                    </a>
+                </div>
+
+                <div class="footer__box three-columns__column three-columns__column--two">
+                    <h4 class="footer__box-heading">collab info</h4>
+                    <p class="footer__box-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis tellus sodales, suscipit enim a, placerat lectus.
+                    </p>
+                    <p class="footer__box-text">
+                        Phasellus nunc dolor, luctus elementum lacus nec, laoreet commodo velit. Vestibulum in ante nec.
+                    </p>
+                </div>
+
+                <div class="footer__box three-columns__column three-columns__column--three">
+                    <h4 class="footer__box-heading">menu</h4>
+                    <a href="#header" class="footer__box-row">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Home</p>
+                    </a>
+                    <a href="#about" class="footer__box-row">
+                        <i class="fa-solid fa-address-card"></i>
+                        <p>About</p>
+                    </a>
+                    <a href="#skills" class="footer__box-row">
+                        <i class="fa-solid fa-mug-saucer"></i>
+                        <p>Skills</p>
+                    </a>
+                    <a href="#projects" class="footer__box-row">
+                        <i class="fa-solid fa-code"></i>
+                        <p>Projects</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+ 
+      
+      
+
+<script src="dist/js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+@import './colors';
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 2em;
+}
+
+.accent {
+    color: $accent-color;
+}
+
+.link-animation {
+    position: relative;
+
+    &::after, &::before {
+        content: '';
+        transition: .3s;
+        position: absolute;
+        width: 0;
+        bottom: 0;
+        border-bottom: 4px solid $accent-color;
+    }
+
+    &::before {
+        left: 50%;
+    }
+
+    &::after {
+        right: 50%;
+    }
+
+    &:hover::before, &:hover::after {
+        width: 40%;
+    }
+}
+
+.section-padding {
+    padding: 5em 0;
+}
+
+.section-title {
+    padding-bottom: 1em;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.6rem;
+    text-align: center;
+}
+
+.three-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 4em;
+    column-gap: 1em;
+
+    &__column {
+        &--one {
+            grid-row: 1/2;
+            grid-column: 1/3;
+    
+        }
+        &--two {
+            grid-row: 2/3;
+            grid-column: 1/3;
+    
+        }
+        &--three {
+            grid-row: 3/4;
+            grid-column: 1/3;
+    
+        }
+    }
+}
+
+
+// MEDIA 
+
+@media(min-width: 576px) {
+
+    .section-padding {
+        padding: 6em 0;
+    }
+    .section-title {
+        font-size: 4.5rem;
+    }
+
+    
+}
+
+
+@media(min-width: 768px) {
+
+    .three-columns {
+        grid-template-rows: repeat(2, 1fr);
+
+        &__column {
+            &--one {
+                grid-row: 1/2;
+                grid-column: 1/2;
+        
+            }
+            &--two {
+                grid-row: 1/2;
+                grid-column: 2/3;
+        
+            }
+            &--three {
+                grid-row: 2/4;
+                grid-column: 1/3;
+        
+            }
+        }
+    }
+
+
+}
+
+
+@media(min-width: 992px) {
+    .section-padding {
+        padding: 7em 0;
+    }
+    .section-title {
+        font-size: 4.8rem;
+        font-weight: 600;
+    }
+
+    .three-columns {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+
+        &__column {
+            &--one {
+                grid-row: 1/2;
+                grid-column: 1/2;
+        
+            }
+            &--two {
+                grid-row: 1/2;
+                grid-column: 2/3;
+        
+            }
+            &--three {
+                grid-row: 1/2;
+                grid-column: 3/4;
+        
+            }
+        }
+    }
+
+}
+
+
+@media(min-width: 1200px) {
+
+}
+
