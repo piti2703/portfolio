@@ -41,7 +41,7 @@ body {
         
         a {
             color: $main-color;
-            padding: 0.5em 0 0 0.6em;
+            padding: 1.2em 0 0 1em;
         }
         i {
             font-size: 2.2rem;
@@ -125,7 +125,7 @@ body {
     &__arrows {
         position: absolute;
         bottom: 5%;
-        left: 50%;
+        right: 50%;
         transform: translateX(-50%);
         font-size: 3rem;
         animation: arrowtrans 1.5s infinite;
