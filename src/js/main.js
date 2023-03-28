@@ -22,7 +22,7 @@ const typeHeading = () => {
     let m = 0
     const typingInterval = setInterval( () => {
 
-        console.log(headingArr.slice(0, n).concat(headingArr2).join(''));
+        // console.log(headingArr.slice(0, n).concat(headingArr2).join(''));
 
         if(n <= 13) {
             headerHeading.textContent = headingArr.slice(0, n).concat(headingArr2).join('');
@@ -44,7 +44,7 @@ const typeHeading = () => {
         const headerHeading2 = document.querySelector('.header__bottom-heading--accent')
         const typingInterval2 = setInterval( () => {
 
-            console.log(headingArr3.slice(0, m).concat(headingArr2).join(''));
+            // console.log(headingArr3.slice(0, m).concat(headingArr2).join(''));
             headerHeading2.textContent = headingArr3.slice(0, m).concat(headingArr2).join('');
             m++
 
